@@ -1,0 +1,17 @@
+{
+  "name": "brainly-cli",
+  "version": "1.0.0",
+  "description": "Jawaban instant",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "FaizBastomi",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "brainly-scraper": "^1.0.3",
+    "brainly-scraper-v2": "^1.1.2",
+    "chalk": "^4.1.1"
+  }
+}
