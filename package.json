@@ -11,7 +11,7 @@
   "author": "FaizBastomi",
   "license": "UNLICENSED",
   "dependencies": {
-    "brainly-scraper-v2": "^1.1.2",
+    "brainly-scraper-v2": "^2.0.4-1",
     "chalk": "^4.1.1"
   }
 }
