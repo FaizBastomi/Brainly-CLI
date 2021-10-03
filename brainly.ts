@@ -1,21 +1,20 @@
 import brainly from "brainly-scraper-v2";
 import { brainlyResult } from './types/index';
 
-const brnl = new brainly();
 export const search = async (query: string) => {
     try {
-        const reS = await brnl.search('id', query, 5);
+        const reS = await brainly(query, 5, "id");
 
-        let opt: brainlyResult = { result: [{ question: { content: '', author: undefined }, answer: { content: '', author: undefined } }] };
-        reS.forEach((v) => {
+        let opt: brainlyResult = { result: [{ question: { content: '' }, answer: { content: '', media: [] } }] };
+        reS.data.forEach((v) => {
             let q = v;
-            v.answers.forEach((v) => {
+            v.jawaban.forEach((v) => {
                 opt.result.push({
-                    question: { content: q.question.content, author: q.question.author },
-                    answer: { content: v.content, author: v.author }
-                });
-            });
-        });
+                    question: { content: q.pertanyaan },
+                    answer: { content: v.text, media: v.media }
+                })
+            })
+        })
         return opt;
     } catch (e) {
         throw e;

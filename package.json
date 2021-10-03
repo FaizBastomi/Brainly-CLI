@@ -1,17 +1,22 @@
 {
   "name": "brainly-cli",
-  "version": "1.0.0",
+  "version": "1.2.3-01",
   "description": "Jawaban instant",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "ts-node index.ts"
   },
   "keywords": [],
   "author": "FaizBastomi",
   "license": "UNLICENSED",
   "dependencies": {
-    "brainly-scraper-v2": "^2.0.4-1",
+    "brainly-scraper-v2": "1.1.2",
     "chalk": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.10.2",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
   }
 }

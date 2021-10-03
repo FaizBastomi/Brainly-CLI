@@ -18,9 +18,10 @@ const start = function () {
             process.exit(1);
         }
         search(q).then((r) => {
+            r.result = r.result.slice(1)
             r.result.forEach((v) => {
-                console.log(color("SOAL: "+v.question.content+"    "+`(${v.question.author})\n`, "lime"));
-                console.log(color("JWBN: "+v.answer.content+"    "+`(${v.answer.author})\n\n`,"lime"));
+                console.log("SOAL:",color(v.question.content, "lime"));
+                console.log("JWBN:",color(v.answer.content,"lime") + (v.answer.media.length === 0 ? '\n' : `\nMEDIA: ${v.answer.media.join(' , ')}\n`));
             })
             rl.question("Lanjut? [Y/n] => ", (n: string) => {
                 if (n === 'Y' || n === 'y') start();
