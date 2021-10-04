@@ -25,7 +25,7 @@ const start = function () {
             })
             rl.question("Lanjut? [Y/n] => ", (n: string) => {
                 if (n === 'Y' || n === 'y') start();
-                else if (n === 'N' || n === 'n') return process.exit(1);
+                else if (n === 'N' || n === 'n') return process.exit();
                 else start();
             })
         })
