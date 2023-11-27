@@ -1,6 +1,13 @@
 export interface brainlyResult {
-    result: {
-        question: { content: string };
-        answer: { content: string, media: string[]|[] }
-    }[];
+    result: brainlyData[];
+}
+
+export interface brainlyData {
+    question: string;
+    answers: Answer[];
+}
+
+interface Answer {
+    content?: string;
+    attachments?: string[]|[];
 }
