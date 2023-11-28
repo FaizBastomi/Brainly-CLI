@@ -1,6 +1,9 @@
 import { Brainly } from 'brainly-scraper-v2';
 import { brainlyData, brainlyResult } from './types/index';
 
+// Initialize
+Brainly.initialize();
+
 const stripHtmlTags = (str: string) => {
     if (str === null || str === undefined || str === '') return '';
     return str.replace(/(<([^>]+)>)/gi, '');
